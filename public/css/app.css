@@ -123,3 +123,29 @@ nav .lower .search-bar i {
   left: 0;
   transform: translate(0, -50%);
 }
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+main .container {
+  padding: 50px 0;
+  flex-wrap: wrap;
+}
+main .container .card {
+  width: calc(100% / 5);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
+main .container .card .cover img {
+  width: 100%;
+}
+main .container .card .card-title {
+  text-align: center;
+  width: 90%;
+}

@@ -1,0 +1,23 @@
+main {
+    @include flex(row,center,center);
+    .container {
+        padding: 50px 0;
+        flex-wrap: wrap;
+        .card {
+            width: calc(100% / 5);
+            @include flex(column, center, center);
+            margin: 15px;
+
+            .cover {
+                img {
+                    width: 100%;
+                }
+            }
+            .card-title {
+                text-align: center;
+                width: 90%;
+            }
+        }
+    }
+}
+
