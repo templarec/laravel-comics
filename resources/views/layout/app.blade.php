@@ -14,7 +14,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <!-- My custom style -->
-    <link rel="stylesheet" href="../../../public/css/app.css">
+    <link rel="stylesheet" href="css/app.css">
     <meta charset="UTF-8">
     <title>laravel-comics</title>
 </head>
@@ -32,7 +32,7 @@
 
 
 <!-- My custom JS script -->
-<script src="../../../public/js/app.js"></script>
+<script src="js/app.js"></script>
 </body>
 <!-- laravel-comics - 12/05/21
  Author: lorenzobernini -->

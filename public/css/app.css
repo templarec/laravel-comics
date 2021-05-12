@@ -3,3 +3,92 @@
   margin: 0;
   box-sizing: border-box;
 }
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+}
+
+nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+nav .upper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  background-color: #0000FF;
+  color: #ffffff;
+  font-size: 12px;
+  padding: 3px 0;
+}
+nav .upper span {
+  padding: 0 5px;
+}
+nav .upper span:first-child {
+  margin-left: auto;
+}
+nav .lower {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 0;
+  width: 100%;
+}
+nav .lower .logo img {
+  width: 80px;
+}
+nav .lower .menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+nav .lower .menu ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+nav .lower .menu ul li {
+  text-transform: uppercase;
+  list-style: none;
+  margin: 0 10px;
+}
+nav .lower .search-bar {
+  margin-left: 20px;
+  position: relative;
+}
+nav .lower .search-bar input {
+  outline: 0;
+  font-size: 18px;
+  text-align: right;
+  padding-right: 35px;
+  width: 200px;
+  border: 0;
+  border-bottom: 2px solid #0000ff;
+}
+nav .lower .search-bar i {
+  position: absolute;
+  top: 5px;
+  left: 90%;
+}

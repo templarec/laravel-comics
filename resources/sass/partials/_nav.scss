@@ -1,0 +1,62 @@
+nav {
+    @include flex(column, center, center);
+
+    width: 100%;
+    .upper {
+        @include flex(row,center,center);
+        width: 100%;
+        background-color: $uppernav-bg;
+        color: $uppernav-txt;
+        font-size: 12px;
+        padding: 3px 0;
+        span {
+            padding: 0 5px;
+            &:first-child {
+                margin-left: auto;
+            }
+        }
+
+
+    }
+    .lower {
+        @include flex(row,center,center);
+        padding: 5px 0;
+        width: 100%;
+        .logo  {
+            img {
+                width: 80px;
+            }
+        }
+        .menu  {
+            @include flex(row,center,center);
+            ul {
+                @include flex(row,center,center);
+                li {
+                    text-transform: uppercase;
+                    list-style: none;
+                    margin: 0 10px;
+                }
+
+            }
+        }
+        .search-bar {
+
+            margin-left: 20px;
+            position: relative;
+            input {
+                outline: 0;
+                font-size: 18px;
+                text-align: right;
+                padding-right: 35px;
+                width: 200px;
+                border: 0;
+                border-bottom: 2px solid $searchbox-border;
+            }
+            i {
+                position: absolute;
+                top: 5px;
+                left: 90%;
+            }
+        }
+    }
+}
