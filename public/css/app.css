@@ -125,6 +125,7 @@ nav .lower .search-bar i {
 }
 
 main {
+  background-color: #333333;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -136,6 +137,7 @@ main .container {
 }
 main .container .card {
   width: calc(100% / 5);
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -143,9 +145,11 @@ main .container .card {
   margin: 15px;
 }
 main .container .card .cover img {
-  width: 100%;
+  height: 100%;
 }
 main .container .card .card-title {
+  padding-top: 5px;
+  color: #ffffff;
   text-align: center;
   width: 90%;
 }
