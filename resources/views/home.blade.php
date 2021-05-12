@@ -1,0 +1,11 @@
+@extends('layout.app')
+@section('header')
+    @include('nav')
+    @include('jumbo')
+@endsection
+@section('main')
+    @include('main')
+@endsection
+@section('footer')
+    @include('footer')
+@endsection
