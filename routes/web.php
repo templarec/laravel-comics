@@ -15,10 +15,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $database = config('comics');
-
-    return view('home')->with("comic", $database);
+    $route = Route::current();
+    return view('home')->with("comic", $database)->with('route', $route);
 });
 Route::get('/comic-detail/{id}', function ($id) {
     $database = config('comics');
-       return view('comic-detail')->with("comic", $database[$id]);
+    $route = Route::current();
+       return view('comic-detail')->with("comic", $database[$id])->with('route', $route);
 })->name('detail');

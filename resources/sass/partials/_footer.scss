@@ -1,0 +1,85 @@
+.upper-footer {
+    background-color: $upper-footer-bg;
+    border-top: 1px solid $details-brd;
+    border-bottom: 1px solid $details-brd;
+    @include flex(row,center,center);
+    .container {
+        color: $upper-footer-txt;
+        ul {
+            @include flex(row, center, center);
+            li {
+                @include flex(row,space-between,center);
+                list-style: none;
+                border-right: 1px solid $details-brd;
+                padding: 10px;
+                width: 300px;
+                &:first-child {
+                    border-left: 1px solid $details-brd;
+                }
+                span {
+                    font-size: 12px;
+                    font-weight: 900;
+                    align-self: flex-start;
+                    text-transform: uppercase;
+
+                }
+                img {
+                    height: 50px;
+                    filter: brightness(80%);
+                }
+            }
+        }
+    }
+}
+.lower-footer {
+    background-image: url("./../images/footer-bg.jpg");
+    @include flex(row,center,center);
+    padding: 50px 0;
+    overflow-y: hidden;
+    .container {
+        position: relative;
+        @include flex(column, center, flex-start);
+        .links  {
+
+            @include flex(row, space-between,flex-start);
+            .li-title {
+                font-size: 18px;
+                text-transform: uppercase;
+                color: #ffffff;
+                font-weight: 900;
+
+            }
+            ul {
+                margin-right: 50px;
+                li {
+                    list-style: none;
+                    a {
+                        color: $footer-links;
+                        font-size: 10px;
+
+                    }
+                    &.li-title{
+                        margin-top: 20px;
+                    }
+                }
+
+            }
+
+        }
+        .disclaimer {
+            margin-top: 10px;
+            font-size: 10px;
+            p {
+                color: #636b6f;
+            }
+            a {
+                color: blue;
+            }
+        }
+        #bg-logo {
+            position: absolute;
+            left: 100%;
+            transform: translate(-100%);
+        }
+    }
+}

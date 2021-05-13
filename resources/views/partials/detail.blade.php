@@ -51,7 +51,7 @@
                 <div class="series">
                     <span>Series: </span>
                     <span>
-                        <a href="#">{{$comic['series']}}</a>{{$comic['series']}}
+                        <a href="#">{{$comic['series']}}</a>
                     </span>
                 </div>
                 <div class="price">
@@ -65,4 +65,5 @@
             </div>
         </div>
     </div>
+
 </main>

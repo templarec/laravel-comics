@@ -14,8 +14,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <!-- My custom style -->
-    <link rel="stylesheet" href="css/app.css">
-    <link rel="stylesheet" href="../css/app.css">
+    @if($route->uri == '/')
+        <link rel="stylesheet" href="css/app.css">
+    @else
+        <link rel="stylesheet" href="../css/app.css">
+    @endif
+
+
     <meta charset="UTF-8">
     <title>laravel-comics</title>
 </head>
@@ -34,7 +39,12 @@
 
 
 <!-- My custom JS script -->
-<script src="js/app.js"></script>
+    @if($route->uri == '/')
+        <script src="js/app.js"></script>
+    @else
+        <script src="../js/app.js"></script>
+    @endif
+
 </body>
 <!-- laravel-comics - 12/05/21
  Author: lorenzobernini -->

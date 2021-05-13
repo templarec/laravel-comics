@@ -7,7 +7,11 @@
         <div class="lower">
             <div class="container">
                 <div class="logo">
-                    <img src="images/dc-logo.png" alt="DC logo">
+                @if($route->uri == '/')
+                        <a href="/"><img src="images/dc-logo.png" alt="DC logo"></a>
+                    @else
+                        <a href="/"><img src="../images/dc-logo.png" alt="DC logo"></a>
+                    @endif
                 </div>
                 <div class="menu">
                     <ul>

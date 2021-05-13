@@ -54,11 +54,12 @@ main {
             }
         }
         .card-detail {
-            @include flex(row, space-evenly, center);
+            @include flex(row, space-between, flex-start);
             width: 100%;
             .left  {
                 @include flex(column, center, flex-start);
-                width: 55%;
+                width: calc(80% - 50px);
+                margin-right: 50px;
                 .detail-title {
                     margin-bottom: 15px;
                 }
@@ -68,13 +69,13 @@ main {
                     border-bottom: 1px solid #000000;
                     margin: 10px 0;
                     color: #ffffff;
-                    width: 80%;
+                    width: 100%;
                     div {
                         padding: 10px 15px;
                         color: #ffffff;
                         span {
 
-                            color: #7fc67f;
+                            color: #5AD97E;
                         }
                     }
                     div:first-child {
@@ -87,36 +88,52 @@ main {
                 }
                 .description {
                     font-size: 14px;
-                    width: 80%;
+                    width: 100%;
                 }
             }
             .right {
-
-                @include flex(column, center, flex-start);
+                width: calc(20% - 50px);
+                @include flex(column, center, flex-end);
                 h3 {
 
-                    margin-left: auto;
                 }
             }
         }
     }
     .comic-info {
-        background-color: #bbbbbb;
+        background-color: #F6F6F6;
         width: 100%;
+        font-size: 12px;
         @include flex(row,center,center);
+        a {
+            color: $detail-links;
+            font-weight: 900;
+            &:hover {
+                color: #ff0000;
+            }
+        }
         .container{
-            justify-content: center;
+            align-items: flex-start;
             span {
                 width: 100%;
             }
+            h3 {
+                font-size: 25px;
+                margin-right: auto;
+            }
+
             .talent {
-                width: 50%;
-                font-size: 10px;
+                width: calc(100% / 2 - 50px);
+                margin-right: 50px;
                 @include flex(column, space-between, center);
+                div {
+                    padding: 10px 0;
+                }
                 ul {
                     @include flex(row, flex-start, center);
-                    width: 50%;
+                    width: 70%;
                     flex-wrap: wrap;
+
                     li {
                         padding: 0 3px;
                         list-style: none;
@@ -124,33 +141,45 @@ main {
                     }
                 }
                 .art {
-                    width: 50%;
+                    width: 100%;
                     @include flex(row, center, center);
-                    border-top: 1px solid #333333;
-                    border-bottom: 1px solid #333333;
-
+                    border-top: 1px solid $details-brd;
+                    border-bottom: 1px solid $details-brd;
+                span {
+                    width: 30%;
+                    align-self: flex-start;
+                }
                 }
                 .written {
-                    width: 50%;
+                    width: 100%;
                     @include flex(row, center, center);
-                    border-bottom: 1px solid #333333;
+                    border-bottom: 1px solid $details-brd;
+                    span {
+                        width: 30%;
+                        align-self: flex-start;
+                    }
                 }
             }
             .specs {
-                width: 50%;
-                font-size: 10px;
+                width: calc(100% / 2 - 50px);
                 margin-right:auto;
                 @include flex(column, space-between, center);
+                div {
+                    padding: 10px 0;
+                }
                 .series {
                     width: 100%;
                     @include flex(row, center, center);
-                    border-top: 1px solid #333333;
-                    border-bottom: 1px solid #333333;
+                    border-top: 1px solid $details-brd;
+                    border-bottom: 1px solid $details-brd;
+                    span:last-child {
+                        text-transform: uppercase;
+                    }
                    }
                 .price, .sale-date {
                     width: 100%;
                     @include flex(row, center, center);
-                    border-bottom: 1px solid #333333;
+                    border-bottom: 1px solid $details-brd;
                 }
             }
         }
