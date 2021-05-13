@@ -1,10 +1,13 @@
 <main>
     <div class="container">
-        @foreach($film as $id => $card)
+        <div class="floating-title">
+            current series
+        </div>
+        @foreach($comic as $id => $card)
             <div class="card">
 
                 <div class="cover">
-                    <a href="/comic-detail?id={{$id}}"><img src="{{$card['thumb']}}" alt="image cover"></a>
+                    <a href="{{route('detail', ['id' => $id])}}"><img src="{{$card['thumb']}}" alt="image cover"></a>
 
                 </div>
                 <div class="card-title">

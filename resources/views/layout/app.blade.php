@@ -15,6 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
     <!-- My custom style -->
     <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="../css/app.css">
     <meta charset="UTF-8">
     <title>laravel-comics</title>
 </head>

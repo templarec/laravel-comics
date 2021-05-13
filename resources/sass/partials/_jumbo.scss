@@ -4,22 +4,5 @@
     background-image: url('./../images/jumbotron.jpg');
     background-size: cover;
     @include flex(row,center,center);
-    .container {
-        position: relative;
-        height: 100%;
-        .floating-title {
-            @include flex(row,center,center);
-            width: 200px;
-            height: 50px;
-            text-transform: uppercase;
-            position: absolute;
-            color: $floating-title-txt;
-            background-color: $floating-title-bg;
-            padding: 20px;
-            top: 100%;
-            left: 0;
-            transform: translate(0, -50%);
-        }
-    }
 
 }

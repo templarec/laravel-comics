@@ -21,12 +21,25 @@ main {
         padding: 50px 0;
         flex-wrap: wrap;
         position: relative;
-        justify-content: flex-start;
+        justify-content: space-between;
+        .floating-title {
+            @include flex(row,center,center);
+            width: 200px;
+            height: 50px;
+            text-transform: uppercase;
+            position: absolute;
+            color: $floating-title-txt;
+            background-color: $floating-title-bg;
+            padding: 20px;
+            top: 0;
+            left: 0;
+            transform: translate(0, -50%);
+        }
         .card {
-            width: calc(100% / 5);
+            width: calc(100% / 7);
             height: 100%;
             @include flex(column, center, center);
-            margin: 15px;
+            margin: 7px;
 
             .cover {
                 img {
@@ -41,11 +54,11 @@ main {
             }
         }
         .card-detail {
-            @include flex(row, center, center);
+            @include flex(row, space-evenly, center);
             width: 100%;
             .left  {
+                @include flex(column, center, flex-start);
                 width: 55%;
-                margin-right: 30px;
                 .detail-title {
                     margin-bottom: 15px;
                 }
@@ -55,7 +68,7 @@ main {
                     border-bottom: 1px solid #000000;
                     margin: 10px 0;
                     color: #ffffff;
-
+                    width: 80%;
                     div {
                         padding: 10px 15px;
                         color: #ffffff;
@@ -74,16 +87,70 @@ main {
                 }
                 .description {
                     font-size: 14px;
+                    width: 80%;
                 }
             }
             .right {
-                width: 45%;
-                @include flex(column, center, flex-end);
+
+                @include flex(column, center, flex-start);
                 h3 {
-                    margin: 5px 0;
 
+                    margin-left: auto;
+                }
+            }
+        }
+    }
+    .comic-info {
+        background-color: #bbbbbb;
+        width: 100%;
+        @include flex(row,center,center);
+        .container{
+            justify-content: center;
+            span {
+                width: 100%;
+            }
+            .talent {
+                width: 50%;
+                font-size: 10px;
+                @include flex(column, space-between, center);
+                ul {
+                    @include flex(row, flex-start, center);
+                    width: 50%;
+                    flex-wrap: wrap;
+                    li {
+                        padding: 0 3px;
+                        list-style: none;
+                        white-space: nowrap;
+                    }
+                }
+                .art {
+                    width: 50%;
+                    @include flex(row, center, center);
+                    border-top: 1px solid #333333;
+                    border-bottom: 1px solid #333333;
 
-
+                }
+                .written {
+                    width: 50%;
+                    @include flex(row, center, center);
+                    border-bottom: 1px solid #333333;
+                }
+            }
+            .specs {
+                width: 50%;
+                font-size: 10px;
+                margin-right:auto;
+                @include flex(column, space-between, center);
+                .series {
+                    width: 100%;
+                    @include flex(row, center, center);
+                    border-top: 1px solid #333333;
+                    border-bottom: 1px solid #333333;
+                   }
+                .price, .sale-date {
+                    width: 100%;
+                    @include flex(row, center, center);
+                    border-bottom: 1px solid #333333;
                 }
             }
         }
@@ -91,6 +158,5 @@ main {
     &.detail {
         background-color: $detail-bg;
     }
-
 }
 
