@@ -1,9 +1,27 @@
 main {
     background-color: $main_bg;
-    @include flex(row,center,center);
+    @include flex(column,center,center);
+    .blue-bar {
+        width: 100%;
+        height: 100px;
+        background-color: $uppernav-bg;
+        position: relative;
+
+        .floating-poster {
+            position: absolute;
+            left: 11%;
+            bottom: 10px;
+            img {
+                font-size: 0;
+                border: 1px solid #ffffff;
+            }
+        }
+    }
     .container {
         padding: 50px 0;
         flex-wrap: wrap;
+        position: relative;
+        justify-content: flex-start;
         .card {
             width: calc(100% / 5);
             height: 100%;
@@ -22,6 +40,57 @@ main {
                 width: 90%;
             }
         }
+        .card-detail {
+            @include flex(row, center, center);
+            width: 100%;
+            .left  {
+                width: 55%;
+                margin-right: 30px;
+                .detail-title {
+                    margin-bottom: 15px;
+                }
+                .bar {
+                    @include flex(row, center, center);
+                    background-color: $statusbar-bg;
+                    border-bottom: 1px solid #000000;
+                    margin: 10px 0;
+                    color: #ffffff;
+
+                    div {
+                        padding: 10px 15px;
+                        color: #ffffff;
+                        span {
+
+                            color: #7fc67f;
+                        }
+                    }
+                    div:first-child {
+                        margin-right: auto;
+                    }
+                    div:last-child {
+                        color: #ffffff;
+                        border-left: 1px solid #000000;
+                    }
+                }
+                .description {
+                    font-size: 14px;
+                }
+            }
+            .right {
+                width: 45%;
+                @include flex(column, center, flex-end);
+                h3 {
+                    margin: 5px 0;
+
+
+
+                }
+            }
+        }
     }
+    &.detail {
+        background-color: $detail-bg;
+    }
+
 }
 

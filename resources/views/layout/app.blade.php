@@ -20,13 +20,14 @@
 </head>
 <body>
     <header>
-        @yield('header')
+        @include('partials.nav')
+        @include('partials.jumbo')
     </header>
-    <main>
+
         @yield('main')
-    </main>
+
     <footer>
-        @yield('footer')
+        @include('partials.footer')
     </footer>
 
 

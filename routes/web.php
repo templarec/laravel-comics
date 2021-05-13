@@ -18,3 +18,7 @@ Route::get('/', function () {
 
     return view('home')->with("film", $database);
 });
+Route::get('/comic-detail', function () {
+    $database = config('comics');
+       return view('comic-detail')->with("film", $database);
+});
