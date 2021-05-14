@@ -138,6 +138,10 @@ main {
                         padding: 0 3px;
                         list-style: none;
                         white-space: nowrap;
+                        &:not(:last-child):after{
+                            font-weight: bold;
+                            content: ',';
+                        }
                     }
                 }
                 .art {
@@ -145,10 +149,11 @@ main {
                     @include flex(row, center, center);
                     border-top: 1px solid $details-brd;
                     border-bottom: 1px solid $details-brd;
-                span {
-                    width: 30%;
-                    align-self: flex-start;
-                }
+                    span {
+                        width: 30%;
+                        align-self: flex-start;
+                    }
+
                 }
                 .written {
                     width: 100%;
@@ -157,6 +162,9 @@ main {
                     span {
                         width: 30%;
                         align-self: flex-start;
+                        &:after:not(:last-child) {
+                            content: ',';
+                        }
                     }
                 }
             }

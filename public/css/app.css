@@ -273,6 +273,10 @@ main .comic-info .container .talent ul li {
   list-style: none;
   white-space: nowrap;
 }
+main .comic-info .container .talent ul li:not(:last-child):after {
+  font-weight: bold;
+  content: ",";
+}
 main .comic-info .container .talent .art {
   width: 100%;
   display: flex;
@@ -297,6 +301,9 @@ main .comic-info .container .talent .written {
 main .comic-info .container .talent .written span {
   width: 30%;
   align-self: flex-start;
+}
+main .comic-info .container .talent .written span:after:not(:last-child) {
+  content: ",";
 }
 main .comic-info .container .specs {
   width: calc(100% / 2 - 50px);
@@ -331,6 +338,48 @@ main .comic-info .container .specs .price, main .comic-info .container .specs .s
 }
 main.detail {
   background-color: #ffffff;
+}
+
+.upper-footer.home {
+  background-color: #0000ff;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding: 10px 0;
+}
+.upper-footer.home .container {
+  color: #D8D8D8;
+}
+.upper-footer.home .container ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.upper-footer.home .container ul li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  list-style: none;
+  padding: 10px;
+  width: 300px;
+  border: none;
+}
+.upper-footer.home .container ul li:first-child {
+  border: none;
+}
+.upper-footer.home .container ul li span {
+  font-size: 12px;
+  font-weight: 900;
+  align-self: center;
+  text-transform: uppercase;
+}
+.upper-footer.home .container ul li img {
+  height: 50px;
+  filter: brightness(100%);
 }
 
 .upper-footer {

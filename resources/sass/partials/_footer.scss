@@ -1,3 +1,36 @@
+.upper-footer.home {
+    background-color: $upper-footer-bg-home;
+    @include flex(row,center,center);
+    border: none;
+    padding: 10px 0;
+    .container {
+        color: $upper-footer-txt;
+        ul {
+            @include flex(row, center, center);
+
+            li {
+                @include flex(row,space-around,center);
+                list-style: none;
+                padding: 10px;
+                width: 300px;
+                border: none;
+                &:first-child {
+                    border: none;
+                }
+                span {
+                    font-size: 12px;
+                    font-weight: 900;
+                    align-self: center;
+                    text-transform: uppercase;
+                }
+                img {
+                    height: 50px;
+                    filter: brightness(100%);
+                }
+            }
+        }
+    }
+}
 .upper-footer {
     background-color: $upper-footer-bg;
     border-top: 1px solid $details-brd;

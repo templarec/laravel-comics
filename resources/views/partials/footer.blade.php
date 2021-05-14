@@ -3,7 +3,7 @@
 @else
     <?php $root = ''; ?>
 @endif
-<div class="upper-footer">
+<div class="{{ ($route->uri == '/') ? 'upper-footer home' : 'upper-footer' }}">
     <div class="container">
         <ul>
             <li>
